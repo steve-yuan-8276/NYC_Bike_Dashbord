@@ -45,25 +45,19 @@ The dataset does not include the ride distance directly, but it does provide the
 
 #### Haversine Formula:
 
-\[
-a = \sin^2\left(\frac{\Delta \varphi}{2}\right) + \cos(\varphi_1) \cdot \cos(\varphi_2) \cdot \sin^2\left(\frac{\Delta \lambda}{2}\right)
-\]
+```
+a = sin²(Δφ/2) + cos(φ₁) * cos(φ₂) * sin²(Δλ/2)
 
-\[
-c = 2 \cdot \text{atan2}\left(\sqrt{a}, \sqrt{1-a}\right)
-\]
+c = 2 * atan2( √a, √(1−a) )
 
-\[
-d = R \cdot c
-\]
-
+d = R * c
+```
 Where:
-
-- \(\varphi_1\) and \(\varphi_2\) are the latitudes of the two points (in radians).
-- \(\Delta \varphi\) is the difference between the latitudes.
-- \(\Delta \lambda\) is the difference between the longitudes.
-- \(R\) is the Earth's radius (mean radius = 6,371 km or 3,963 miles).
-- \(d\) is the distance between the two points.
+- φ₁ and φ₂ are the latitudes of the two points (in radians).
+- Δφ is the difference between the latitudes.
+- Δλ is the difference between the longitudes.
+- R is the Earth's radius (mean radius = 6,371 km or 3,963 miles).
+- d is the distance between the two points.
 
 Since Tableau does not have a built-in Haversine function, a calculated field was created manually:
 
