@@ -2,6 +2,18 @@
 
 **Dashboard URL**: [NYC Bike Dashboard](https://public.tableau.com/app/profile/feng.yuan8276/viz/NYC_Bike_Story/NYC_Citys_Bike_Analysis_Story?publish=yes)
 
+## Key Insights:
+
+- From 2022 to 2023, the total number of rides in the dataset is **3,247,268**.
+- The total ridership growth rate from 2022 to 2023 is **17.7%**.
+- The proportion of members increased from **78% in 2022** to **81.2% in 2023**, reflecting a year-on-year growth of **4.1%**.
+- Based on the dataset, the **summer peak hours** are between **5 PM and 7 PM**, while the **winter peak hours** are between **4 PM and 6 PM**.
+- Casual users have an average ride duration of **29.9 minutes**, while members' average ride duration is **13.8 minutes**.
+- Casual users ride an average distance of **1 mile**, while members average **0.9 miles**—a relatively small difference.
+- The bike most in need of maintenance is the one with the longest cumulative usage time. The dashboard highlights the bike requiring the most maintenance based on usage time.
+- Top 10 and Bottom 10 start and end stations were analyzed, combined with their geographic distribution for further insights.
+
+
 ## About the Data Source
 
 The data is sourced from Citi Bike: [Citi Bike System Data](https://citibikenyc.com/system-data).
@@ -26,7 +38,7 @@ The dataset includes the following columns:
 
 ## ETL Process
 
-This dataset consists of 24 months of usage data, with a total of **76 files**, each containing approximately **1 million rows**, resulting in an estimated **75 to 80 million rows** of data overall. To avoid performance issues during data analysis and visualization, especially considering the local machine's configuration, a **5% random sampling** of the monthly data was taken for analysis and visualization. The final sample size was around **3.2 million rows**.
+This dataset consists of 24 months of usage data, with a total of **76 files**, each containing approximately **1 million rows**, resulting in an estimated **75 to 80 million rows** of data overall. To avoid performance issues during data analysis and visualization, especially considering the local machine's configuration, a **5% random sampling** of the monthly data was taken for analysis and visualization. The final sample size was around **3.25 million rows**.
 
 The data merging and sampling processes were handled using Python. For more details, please refer to the accompanying Jupyter Notebook: [Jupyter Notebook](https://github.com/steve-yuan-8276/NYC_Bike_Dashbord/blob/main/bike_etl.ipynb).
 
