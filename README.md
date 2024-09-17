@@ -4,14 +4,15 @@
 
 ## Key Insights:
 
-- From 2022 to 2023, the total number of rides in the dataset is **3,247,268**.
-- The total ridership growth rate from 2022 to 2023 is **17.7%**.
-- The proportion of members increased from **78% in 2022** to **81.2% in 2023**, reflecting a year-on-year growth of **4.1%**.
-- Based on the dataset, the **summer peak hours** are between **5 PM and 7 PM**, while the **winter peak hours** are between **4 PM and 6 PM**.
-- Casual users have an average ride duration of **29.9 minutes**, while members' average ride duration is **13.8 minutes**.
-- Casual users ride an average distance of **1 mile**, while members average **0.9 miles**—a relatively small difference.
-- The bike most in need of maintenance is the one with the longest cumulative usage time. The dashboard highlights the bike requiring the most maintenance based on usage time.
-- Top 10 and Bottom 10 start and end stations were analyzed, combined with their geographic distribution for further insights.
+- The dataset includes a total of **3,247,268** rides from 2022 to 2023.
+- Total ridership increased by **17.7%** between 2022 and 2023.
+- The proportion of members grew from **78% in 2022** to **81.2% in 2023**, reflecting a **4.1% relative increase**.
+- Based on the data, the **peak hours in summer** are from **5 PM to 7 PM**, while in **winter**, the peak hours shift to **4 PM to 6 PM**.
+- Casual users have an average ride duration of **29.9 minutes**, compared to members, whose average ride duration is **13.8 minutes**.
+- Casual users ride an average distance of **1 mile**, while members average **0.9 miles**, indicating a small difference in ride distance.
+- The bike with the longest cumulative usage time is identified as the one most in need of maintenance. The dashboard highlights this bike based on usage data.
+- The Top 10 and Bottom 10 start and end stations were analyzed, along with their geographic distribution, to provide additional insights.
+
 
 
 ## About the Data Source
@@ -43,6 +44,29 @@ This dataset consists of 24 months of usage data, with a total of **76 files**, 
 The data merging and sampling processes were handled using Python. For more details, please refer to the accompanying Jupyter Notebook: [Jupyter Notebook](https://github.com/steve-yuan-8276/NYC_Bike_Dashbord/blob/main/bike_etl.ipynb).
 
 ## Special Calculated Fields
+
+### Membership Proportion Growth Calculation Method
+
+There are two method：
+
+**Absolute growth rate Formula**:
+
+```
+Absolute Growth Rate = 2023 Membership Proportion - 2022 Membership Proportion
+```
+
+Based on this dataset, the membership proportion for 2022 was **78%**, and for 2023, it was **81.2%**. Thus, the proportion of **member users** increased by **3.2%** from 2022 to 2023.
+
+
+**Relative Growth Rate Formula**:
+
+```
+Relative Growth Rate = (2023 Membership Proportion - 2022 Membership Proportion) / 2022 Membership Proportion * 100
+```
+
+Based on this dataset, the **relative growth rate** of member users compared to 2022 is **4.1%**.
+
+In business analysis, **relative growth rate** is more commonly used because it better reflects the proportional change and growth speed, especially when comparing entities of different scales. Therefore, **relative growth rate** is used in this analysis.
 
 ### Station Coordinates
 
